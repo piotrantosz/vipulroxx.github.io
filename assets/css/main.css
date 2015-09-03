@@ -2163,7 +2163,7 @@
 				margin: 0 0 1.5em 0;
 			}
 
-				h2 br, h3 br, h4 br, h5 br, h6 br {
+				h2 br, h3 br, h4 br, h5 br, h6 br, {
 					display: none;
 				}
 
@@ -2179,7 +2179,10 @@
 				}
 
 		/* Image */
+		img{
+				width: 80%;
 
+		}
 			.image.left {
 				width: 40%;
 			}
