@@ -14,6 +14,9 @@
 		<!-- Header -->
 		<div id="header-wrapper">
 			<div id="header" class="container">
+				<!-- Logo -->
+					<h1 id="logo"><a href="index.html"><img src="images/sy4.png"></a></h1>
+					<p>Give your punch line</p>
 				<nav id="nav">
 					<ul>
 						<li><a class="icon fa-home" href="index.html"><span>Home</span></a></li>
@@ -32,13 +35,37 @@
 				</nav>
 			</div>
 		</div>
-		<div id="features-wrapper">
-			<h3>Register</h3>
-			<h4>Please fill this form for register</h4>
+		<div class="form">
+			<h1>Register</h3>
+			<h2>Please fill this form for registration</h4>
 			<form action="register.php" method="POST">
-				<input type="text" name="firstname" placeholder="First name"><br>
-				<input type="text" name="lastname" placeholder="Last name"><br>
-				<input type="text" name="email" placeholder="Email"><br>
+				<div id="school">
+				<input type="text" name="schoolname" placeholder="School name"><br>
+				<input type="text" name="moderatorname" placeholder="Name of Teacher Moderator"><br>
+			</div>
+				<h2>Names of 15 Participants :</h2>
+				<div id="participants">
+				<input type="text" name="participant" placeholder="Participant 1"><br>
+				<input type="text" name="participant" placeholder="Participant 2"><br>
+				<input type="text" name="participant" placeholder="Participant 3"><br>
+				<input type="text" name="participant" placeholder="Participant 4"><br>
+				<input type="text" name="participant" placeholder="Participant 5"><br>
+				<input type="text" name="participant" placeholder="Participant 6"><br>
+				<input type="text" name="participant" placeholder="Participant 7"><br>
+				<input type="text" name="participant" placeholder="Participant 8"><br>
+				<input type="text" name="participant" placeholder="Participant 9"><br>
+				<input type="text" name="participant" placeholder="Participant 10"><br>
+				<input type="text" name="participant" placeholder="Participant 11"><br>
+				<input type="text" name="participant" placeholder="Participant 12"><br>
+				<input type="text" name="participant" placeholder="Participant 13"><br>
+				<input type="text" name="participant" placeholder="Participant 14"><br>
+				<input type="text" name="participant" placeholder="Participant 15"><br>
+			</div>
+				<h2>Other Info</h2>
+				<div id="info">
+				<input style="border-radius:1%;" type="tel" name="number" placeholder="Phone Number"><br><br>
+				<input type="text" name="email" placeholder="School Email"><br>
+			</div>
 				<input type="submit" value="Register">
 			</form>
 		</section>
