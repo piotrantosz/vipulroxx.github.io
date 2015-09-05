@@ -5,7 +5,8 @@ $participant = $_POST['participant'];
 $moderatorname = $_POST['moderatorname'];
 $number = $_POST['number'];
 $email = $_POST['email'];
-$message = "Data<br>School Name: ".$schoolname." <br>Email: ".$email." <br>Teacher Moderator ".$moderatorname" <br>Phone Number: ".$number;
+//TODO change message
+$message = "Data<br>Name: ".$firstname." ".$lastname."<br>Email: ".$email;
 //TODO add all name of participants
 $params = array(
     'api_user'  => "MegaTruck",
