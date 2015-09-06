@@ -46,6 +46,18 @@ if(isset($_POST['email'])) {
         !isset($_POST['participant13']) ||
         !isset($_POST['participant14']) ||
         !isset($_POST['participant15']) ||
+        !isset($_POST['participant16']) ||
+        !isset($_POST['participant17']) ||
+        !isset($_POST['participant18']) ||
+        !isset($_POST['participant19']) ||
+        !isset($_POST['participant20']) ||
+        !isset($_POST['participant21']) ||
+        !isset($_POST['participant22']) ||
+        !isset($_POST['participant23']) ||
+        !isset($_POST['participant24']) ||
+        !isset($_POST['participant25']) ||
+        !isset($_POST['participant26']) ||
+        !isset($_POST['participant26']) ||
 
         !isset($_POST['number']) ||
 
@@ -73,6 +85,25 @@ if(isset($_POST['email'])) {
     $participant13 = $_POST['participant13'];
     $participant14 = $_POST['participant14'];
     $participant15 = $_POST['participant15'];
+    $participant16 = $_POST['$participant16'];
+    $participant17 = $_POST['participant17'];
+    $participant18 = $_POST['participant18'];
+    $participant19 = $_POST['participant19'];
+    $participant20 = $_POST['participant20'];
+    $participant21 = $_POST['participant21'];
+    $participant22 = $_POST['participant22'];
+    $participant23 = $_POST['participant23'];
+    $participant24 = $_POST['participant24'];
+    $participant25 = $_POST['participant25'];
+    $participant26 = $_POST['participant26'];
+    $participant27 = $_POST['participant27'];
+    $participant28 = $_POST['participant28'];
+    $participant29 = $_POST['participant29'];
+    $participant30 = $_POST['participant30'];
+    $participant30 = $_POST['participant31'];
+    $participant30 = $_POST['participant32'];
+    $participant30 = $_POST['participant33'];
+    $participant30 = $_POST['participant34'];
     $number = $_POST['number'];
     $email = $_POST['email'];
 
@@ -108,6 +139,25 @@ if(isset($_POST['email'])) {
     $email_message .= "Participant Name: ".clean_string($participant13)."\n";
     $email_message .= "Participant Name: ".clean_string($participant14)."\n";
     $email_message .= "Participant Name: ".clean_string($participant15)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant16)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant17)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant18)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant19)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant20)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant21)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant22)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant23)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant24)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant25)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant26)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant27)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant28)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant29)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant30)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant31)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant32)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant33)."\n";
+    $email_message .= "Participant Name: ".clean_string($participant34)."\n";
     $email_message .= "Phone Number of School: ".clean_string($number)."\n";
     $email_message .= "Email: ".clean_string($email)."\n";
 
