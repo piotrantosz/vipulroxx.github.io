@@ -508,7 +508,7 @@
 <div class="section scrollspy" id="register">
     <div class="container">
       <h2 class="header text_b">Please fill this form for registration</h2>
-      <form action="register.php" method="POST" class="form">
+      <form action="register.php" method="POST" class="form" id="registerForm">
 
         <div class="inlineInputs">
           <input type="text" name="schoolname" placeholder="School name">
@@ -533,7 +533,28 @@
           <input style="margin-left: 2%;" type="text" name="email" placeholder="School Email">
         </div>
 
-        <input class="regbut" type="submit" value="Register"><br><br>
+        <input class="regbut" disabled="true" name="reg" type="submit" value="Register">
+
+        <script type="text/javascript">
+        function checkInputs() {
+            var $inputs = $('#registerForm :input');
+            var values = [];
+            $inputs.each(function() { if (name != "reg") { values.push(this.value); } });
+            notNull = true;
+            for (value in values) {
+              if (values[value] == "") {
+                notNull = false;
+                break;
+              }
+            }
+            return notNull;
+        }
+        $('input[type="text"]').on("input", function() {
+           if(checkInputs()) { $('.regbut').prop('disabled', false); }
+           else{ $('.regbut').prop('disabled', true); }
+        });
+        </script>
+
       </form>
     </section>
   </div>
