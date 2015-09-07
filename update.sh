@@ -2,3 +2,4 @@
 SERVER="/Library/WebServer/Documents/"
 rm -rf $SERVER/*
 cp -r * $SERVER
+chmod -R 777 $SERVER/register_xls
