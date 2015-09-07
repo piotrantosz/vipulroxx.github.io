@@ -553,6 +553,12 @@
            if(checkInputs()) { $('.regbut').prop('disabled', false); }
            else{ $('.regbut').prop('disabled', true); }
         });
+
+        $('input[type="tel"]').on("input", function() {
+           if(checkInputs()) { $('.regbut').prop('disabled', false); }
+           else{ $('.regbut').prop('disabled', true); }
+        });
+
         </script>
 
       </form>
