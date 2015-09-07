@@ -24,7 +24,7 @@ $exporter->finalize();
 $sendgrid = new SendGrid('ignauy', 'symbiosis15');
 $email = new SendGrid\Email();
 $email
-    ->addTo('vipulsharma36@gmail.com')
+    ->addTo('vipulsharma936@gmail.com')
     ->addCC('nachoel01@gmail.com')
     ->setFrom('contact@symbiosis15.net')
     ->setSubject('New register from page.')
@@ -37,5 +37,5 @@ $sendgrid->send($email);
 
 // I'm not sure if we want to remove the file after it's sent
 // unlink($filename);
-header('Location: /?send=1#register');
+header('Location: /#register');
 ?>
