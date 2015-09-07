@@ -1,6 +1,5 @@
 <?php
 require 'php-export-data.class.php';
-require 'sendgrid-php/sendgrid-php.php';
 
 $filename = uniqid(rand(), true) . '.xls';
 $exporter = new ExportDataExcel('string');
@@ -21,19 +20,37 @@ fwrite($tmpfile, $exporter->getString());
 fclose($tmpfile);
 
 $exporter->finalize();
-$sendgrid = new SendGrid('ignauy', 'symbiosis15');
-$email = new SendGrid\Email();
-$email
-    ->addTo('vipulsharma936@gmail.com')
-    ->addCC('nachoel01@gmail.com')
-    ->setFrom('contact@symbiosis15.net')
-    ->setSubject('New register from page.')
-    ->setText('XLS file attached')
-    ->setHtml('XLS file attached')
-    ->addAttachment('register_xls/'.$filename, "register.xls", "file-cid")
-;
 
-$sendgrid->send($email);
+
+$url = 'https://api.sendgrid.com/';
+$user = 'ignauy';
+$pass = 'symbiosis15';
+$filePath = 'register_xls';
+
+$params = array(
+    'api_user'  => $user,
+    'api_key'   => $pass,
+    'to'        => 'vipulsharma936@gmail.com',
+    'cc'        => 'nachoel01@gmail.com',
+    'subject'   => 'New register from page',
+    'html'      => 'XLS file attached.',
+    'text'      => 'XLS file attached.',
+    'from'      => 'contact@symbiosis15.net',
+    'files['.$filename.']' => '@'.$filePath.'/'.$filename
+  );
+
+$request =  $url.'api/mail.send.json';
+
+$session = curl_init($request);
+
+curl_setopt ($session, CURLOPT_POST, true);
+curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+curl_setopt($session, CURLOPT_HEADER, false);
+curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($session);
+curl_close($session);
+
 
 // I'm not sure if we want to remove the file after it's sent
 // unlink($filename);
